@@ -1,5 +1,5 @@
 @extends('admin.app')
-@section('title') Dashboard @endsection
+
 @section('content')
 <div class="container">
 @if (count($errors) > 0)
@@ -25,9 +25,8 @@
         </div>
 @endif
 <div class="container">
- <h4 style="text-align:center; height:20px; line-height:20px; margin-left:900px;" ><a href="{{ route('admin.articles.create') }}" ><svg class="bi bi-plus-circle-fill" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-  <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"/>
-</svg></a></h4>
+ <h4 style="text-align:center; height:20px; line-height:20px; margin-left:900px;" ><a href="{{ route('admin.articles.create') }}" >
+Ajouter</a></h4>
    <table class="table table-condensed">
       <tr class="table_profils">
           <td>Id</td>
