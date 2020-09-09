@@ -51,7 +51,7 @@ class CategoryController extends Controller
         $category->image('image', $category);
 
         if ($category->save()) {
-            return redirect()->route('admin.categories.index');
+            return redirect('/admin/categories');
         }
         
         //
