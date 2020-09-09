@@ -35,7 +35,7 @@
     <div class="box">
         <div class="box-header">
         <h3 class="box-title">Category Information</h3>
-        <p><a href="{{ route('categories.create') }}" class="btn btn-primary">Nouvelle catégories</a></p>
+        <p><a href="" class="btn btn-primary">Nouvelle catégories</a></p>
  
        </div>
 
@@ -52,30 +52,7 @@
           <td>Editer</td>
           <td>Supprimer</td>
       </tr>
-      @foreach($categories as $key =>$category)
-      <tr>
-          <td>{{ ++$key }} </td>
-          <td>{{ $category->category_name }}</td>
-          <td>{{ $category->description }}</td>
-          <td>{{ $category->is_active }}</td>
-          <td>{{ $category->created_at }}</td>
-          <td>{{ $category->updated_at }}</td>
-          <td>
-              <img src="{{ asset('image/categories/'.$category->image) }}" alt="" width="80" height="50">
-          </td>
-          <td><a href="{{ route('categories.edit', $category->id) }}" class="btn btn-secondary">Editer</a> </td>
-          <td> 
-          <form action="{{ route('categories.destroy', $category->id) }}"  method="POST" enctype="multipart/form-data">
-              @csrf 
-              @method('DELETE')
-
-              <button type="submit" class="btn btn-danger">Supprimer</button>
-          </form>
-        </td>
-          <td></td>
-      </tr>
-
-      @endforeach
+   
   
    </table>
      </div>

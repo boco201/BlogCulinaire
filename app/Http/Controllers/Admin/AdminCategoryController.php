@@ -15,7 +15,7 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-         $categories = Category::orderBy('id', 'DESC')->paginate(6);
+         $categories = Category::latest()->orderBy('id', 'DESC')->paginate(6);
 
         return view('admin.categories.index', compact('categories'));
         //
