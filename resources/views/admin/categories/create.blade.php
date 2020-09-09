@@ -2,14 +2,14 @@
 
 @section('content')
 <div class="container">
-    <h1 class="titre_principale">Ajouter une category</h1>
+    <h1>Ajouter une category</h1>
     <form method="post" action="{{ route('admin.store') }}" enctype="multipart/form-data">
   @csrf
 <div class="row">
 
 <div class="col-md-12">
 <div class="form-group">
- <label for="category_name">Nom catégorie: </label>
+ <label for="category_name">Nom catégories: </label>
  <input type="text" name="category_name" id="category_name" class="form-control" placeholder="Ajouter un nom de catégorie" value="{{old('category_name')}}">
 </div>
 </div>

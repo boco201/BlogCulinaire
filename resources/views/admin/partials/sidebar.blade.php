@@ -19,12 +19,13 @@
                 <i class="treeview-indicator fa fa-angle-right"></i>
             </a>
             <ul class="treeview-menu">
+            <li>
+                    <a class="treeview-item" href="{{ route('admin.index') }}"><i class="icon fa fa-circle-o"></i> AdminsPanelsCategories</a>
+                </li>
                 <li>
                     <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i>AdminPanelArticle</a>
                 </li>
-                <li>
-                    <a class="treeview-item" href="{{ route('admin.index') }}"><i class="icon fa fa-circle-o"></i> AdminPanelCategories</a>
-                </li>
+    
                 <li>
                     <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i> AdminPanelPremiums</a>
                 </li>
