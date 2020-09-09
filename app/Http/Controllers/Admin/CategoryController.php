@@ -51,8 +51,7 @@ class CategoryController extends Controller
         $category->image('image', $category);
         $category->save();
 
-        return back();
-        
+        return view('admin.categories.index');  
         //
     }
 
