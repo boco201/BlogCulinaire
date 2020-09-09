@@ -49,10 +49,9 @@ class CategoryController extends Controller
         $category->description = $request->description;
         $category->is_active = 1;
         $category->image('image', $category);
+        $category->save();
 
-        if ($category->save()) {
-            return redirect('/admin/categories');
-        }
+        return redirect()->route('categories.index');
         
         //
     }
