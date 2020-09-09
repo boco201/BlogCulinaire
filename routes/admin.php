@@ -8,13 +8,9 @@ Route::group(['prefix'  =>  'admin'], function () {
 
     Route::group(['middleware' => ['auth:admin']], function () {
           //route admin products ---------------------///----------------Route----------------------//
-          Route::get('/categories', 'Admin\AdminCategoryController@index')->name('admin.categories.index');
-
-        /*//---------------------------------------------------Route premiums comments--------------------------------------//
-        Route::get('/premiums/comments', 'Admin\AdminPremiumsCommentairesController@index')->name('admin.comments.index');
-        Route::patch('/premiums/comments/{comment}', 'Admin\AdminPremiumsCommentairesController@update')->name('admin.comments.update');
-        Route::delete('/premiums/comments/{comment}', 'Admin\AdminPremiumsCommentairesController@destroy')->name('admin.comments.destroy'); */
-
+         Route::get('/categories', 'Admin\CategoryController@index')->name('admin.categories.index');
+         Route::get('/categories/create', 'Admin\CategoryController@create')->name('admin.categories.create');
+         Route::post('/categories', 'Admin\CategoryController@store')->name('admin.categories.store');
 
 
         Route::get('/', function () {

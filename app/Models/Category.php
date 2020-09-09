@@ -13,7 +13,6 @@ class Category extends Model
 
     protected $dates = ['deleted_at'];
 
-    
     public static function image($fileName,$category)
     {
        if (request()->hasfile($fileName)) {
@@ -24,11 +23,5 @@ class Category extends Model
             $category->image = $filename;
          }
     }
-    
-    public function articles()
-    {
-        return $this->hasMany(Article::class);
-    }
 
-    //
 }

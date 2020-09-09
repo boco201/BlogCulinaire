@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers\Admin;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Category;
 
-class AdminCategoryController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,7 @@ class AdminCategoryController extends Controller
      */
     public function index()
     {
-         $categories = Category::latest()->orderBy('id', 'DESC')->paginate(6);
-
-        return view('admin.categories.index', compact('categories'));
+        return view('admin.categories.index');
         //
     }
 
@@ -28,8 +26,8 @@ class AdminCategoryController extends Controller
      */
     public function create()
     {
+        
         return view('admin.categories.create');
-        //
     }
 
     /**
@@ -53,8 +51,9 @@ class AdminCategoryController extends Controller
         $category->image('image', $category);
 
         if ($category->save()) {
-            return redirect()->route('admin.categories.index')->withSuccess('Votre categorie est ajoutée avec succès! di le développeur boco!');
+            return redirect()->route('admin.categories.index');
         }
+        
         //
     }
 
@@ -75,9 +74,8 @@ class AdminCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+    public function edit($id)
     {
-        return view('admin.categories.edit', compact('category'));
         //
     }
 
@@ -88,16 +86,8 @@ class AdminCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request, $id)
     {
-        $category->category_name = $request->category_name;
-        $category->description = $request->description;
-        $category->is_active = 1;
-        $category->image('image', $category);
-
-        if ($category->save()) {
-            return redirect()->route('admin.categories.index')->withSecondary('Votre categorie est ajoutée avec succès! di le développeur boco!');
-        }
         //
     }
 
@@ -107,13 +97,8 @@ class AdminCategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy($id)
     {
-       
-        $category->delete();
-
-          return redirect()->route('admin.categories.index')->withDanger('Votre categorie est supprimée avec succès');
-       
         //
     }
 }
