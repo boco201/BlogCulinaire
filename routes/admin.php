@@ -8,9 +8,9 @@ Route::group(['prefix'  =>  'admin'], function () {
 
     Route::group(['middleware' => ['auth:admin']], function () {
           //route admin products ---------------------///----------------Route----------------------//
-         Route::get('/categories', 'Admin\CategoryController@index')->name('categories.index');
-         Route::get('/categories/create', 'Admin\CategoryController@create')->name('categories.create');
-         Route::post('/categories', 'Admin\CategoryController@store')->name('categories.store');
+         Route::get('/categories', 'Admin\CategoryController@index')->name('admin.categories.index');
+         Route::get('/categories/create', 'Admin\CategoryController@create')->name('admin.categories.create');
+         Route::post('/categories', 'Admin\CategoryController@store')->name('admin.categories.store');
 
 
         Route::get('/', function () {
