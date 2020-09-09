@@ -20,13 +20,13 @@
             </a>
             <ul class="treeview-menu">
                 <li>
-                    <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i>AdminPanelArticle</a>
+                    <a class="treeview-item" href="{{ route('admin.articles.index') }}"><i class="icon fa fa-circle-o"></i>AdminPanelArticle</a>
                 </li>
                 <li>
-                    <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i> AdminPanelCategories</a>
+                    <a class="treeview-item" href="{{ route('admin.categories.index') }}"><i class="icon fa fa-circle-o"></i> AdminPanelCategories</a>
                 </li>
                 <li>
-                    <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i> AdminPanelPremiums</a>
+                    <a class="treeview-item" href="{{ route('admin.premiums.index') }}"><i class="icon fa fa-circle-o"></i> AdminPanelPremiums</a>
                 </li>
             </ul>
         </li>
