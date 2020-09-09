@@ -23,7 +23,7 @@
                     <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i>AdminPanelArticle</a>
                 </li>
                 <li>
-                    <a class="treeview-item" href="{{ route('admin.categories.index') }}"><i class="icon fa fa-circle-o"></i> AdminPanelCategories</a>
+                    <a class="treeview-item" href="{{ route('admin.index') }}"><i class="icon fa fa-circle-o"></i> AdminPanelCategories</a>
                 </li>
                 <li>
                     <a class="treeview-item" href=""><i class="icon fa fa-circle-o"></i> AdminPanelPremiums</a>
