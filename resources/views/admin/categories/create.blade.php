@@ -21,7 +21,7 @@
 
 
 	<h1 style="color:red; margin-bottom:20px;text-align:center;font-weight:bold;">Ajouter une catégories</h1>
-	<form method="post" action="{{ route('admin.categories.store') }}" enctype="multipart/form-data">
+	<form method="post" action="{{ route('categories.store') }}" enctype="multipart/form-data">
  @csrf
 <div class="row">
 

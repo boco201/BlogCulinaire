@@ -25,7 +25,7 @@
         </div>
 @endif
 <div class="container">
- <h4 style="text-align:center; height:20px; line-height:20px; margin-left:900px;" ><a href="{{ route('admin.articles.create') }}" >
+ <h4  ><a href="{{ route('articles.create') }}" >
 Ajouter</a></h4>
    <table class="table table-condensed">
       <tr class="table_profils">
@@ -43,13 +43,13 @@ Ajouter</a></h4>
     <td>{{ $article->id }}</td>
     <td class="medias_titre">{{ $article->category->category_name }}</td>
     <td><img src="{{asset('image/articles/'.$article->image )}}" width="100" height="100"></td>
-        <td><a href="{{ route('admin.articles.show', $article->id) }}"> {{ $article->title}} </a>&nbsp&nbsp&nbsp<a href="">AdminPremiums</a></td>
+        <td><a href="{{ route('articles.show', $article->id) }}"> {{ $article->title}} </a>&nbsp&nbsp&nbsp<a href="">AdminPremiums</a></td>
         <td class="medias_titre">{{ Str::limit($article->description, 50)}}</td>
-        <td><a href="{{ route('admin.articles.edit', $article->id) }}" class="btn btn-secondary"><svg class="bi bi-pencil" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <td><a href="{{ route('articles.edit', $article->id) }}" class="btn btn-secondary"><svg class="bi bi-pencil" width="1.5em" height="1.5em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
   <path fill-rule="evenodd" d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z"/>
   <path fill-rule="evenodd" d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z"/>
 </svg></a></td>
-        <td><form method="post" action="{{ route('admin.articles.destroy', $article->id) }}" enctype="multipart/form-data">
+        <td><form method="post" action="{{ route('articles.destroy', $article->id) }}" enctype="multipart/form-data">
    @csrf
    @method('DELETE')
 

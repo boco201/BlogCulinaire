@@ -34,14 +34,14 @@
 
     <div class="box">
         <div class="box-header">
-        <h3 class="box-title" style="text-align:center">Category Information</h3>
-        <p style="text-align:right; margin-right:30px;"><a href="{{ route('admin.categories.create') }}" class="btn btn-primary">Nouvelle catégories</a></p>
+        <h3 class="box-title">Category Information</h3>
+        <p><a href="{{ route('categories.create') }}" class="btn btn-primary">Nouvelle catégories</a></p>
  
        </div>
 
        <div class="box-body">
        <table class="table table-condensed">
-      <tr style="background-color:tomato;color:#fff;height:50px;">
+      <tr>
           <td>#</td>
           <td>Name</td>
           <td>Description</td>
@@ -63,9 +63,9 @@
           <td>
               <img src="{{ asset('image/categories/'.$category->image) }}" alt="" width="80" height="50">
           </td>
-          <td><a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-secondary">Editer</a> </td>
+          <td><a href="{{ route('categories.edit', $category->id) }}" class="btn btn-secondary">Editer</a> </td>
           <td> 
-          <form action="{{ route('admin.categories.destroy', $category->id) }}"  method="POST" enctype="multipart/form-data">
+          <form action="{{ route('categories.destroy', $category->id) }}"  method="POST" enctype="multipart/form-data">
               @csrf 
               @method('DELETE')
 
